@@ -1,0 +1,15 @@
+{
+  "name": "srmp",
+  "description": "SRMP motion planning plugins for Claude Code",
+  "owner": {
+    "name": "SRMP"
+  },
+  "plugins": [
+    {
+      "name": "srmp",
+      "source": "./srmp",
+      "description": "SRMP motion planning skill and MCP server",
+      "version": "0.2.2"
+    }
+  ]
+}

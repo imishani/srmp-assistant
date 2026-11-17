@@ -1,1 +1,0 @@
-# srmp-assistant

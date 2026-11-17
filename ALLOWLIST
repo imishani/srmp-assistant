@@ -1,0 +1,6 @@
+ALLOWLIST
+.claude-plugin/*.json
+srmp/.claude-plugin/plugin.json
+srmp/.mcp.json
+srmp/README.md
+srmp/skills/srmp/**
