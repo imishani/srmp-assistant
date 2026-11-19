@@ -9,7 +9,7 @@
       "name": "srmp",
       "source": "./srmp",
       "description": "SRMP motion planning skill and MCP server",
-      "version": "0.2.2"
+      "version": "0.3.0"
     }
   ]
 }

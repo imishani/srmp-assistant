@@ -1,6 +1,6 @@
 {
   "name": "srmp",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "SRMP motion planning skill and MCP server for Claude Code",
   "author": {
     "name": "SRMP"

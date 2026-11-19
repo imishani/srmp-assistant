@@ -41,13 +41,13 @@ for n in names:
   `(q, status)`) and check the status is `"found"`.
 - Each trajectory's `positions` are move-group joint values (no time column). Its `times`
   are the search's time steps (for example `[0.0, 1.0]`), not seconds.
-- `time_limit` is **not** read by `ECBS` / `xECBS`. In srmp 0.2.1–0.2.2 a query with no solution
+- `time_limit` is **not** read by `ECBS` / `xECBS`. In srmp 0.2.1–0.3.0 a query with no solution
   ran about 60 s before returning an empty dict, whatever `time_limit` said. Keep queries
   feasible (goals reachable, robots not blocking each other's goals) and run long queries in
   a subprocess or worker with a timeout if you must bound wall time.
 - Robots not named in `make_planner` stay in the scene as static obstacles (bystanders).
   `add_robot(..., planned=False)` also adds a robot that is never planned.
-- `is_state_colliding(name)` did not report contact with another robot in srmp 0.2.1–0.2.2;
+- `is_state_colliding(name)` did not report contact with another robot in srmp 0.2.1–0.3.0;
   `is_state_colliding()` with no argument checks the whole scene, robots included. A start
   state that touches another robot makes `plan()` log "Start state is not valid" and return
   an empty trajectory.
@@ -67,7 +67,7 @@ for n in names:
 | `validity_backend` | `"coal"` | `coal`, `vamp` or `auto`. |
 | `verbose` | `"false"` | `"true"` prints search progress. |
 
-When `weight_low_level_heuristic` is omitted, srmp 0.2.1–0.2.2 logs "Using default: 1.0" but the
+When `weight_low_level_heuristic` is omitted, srmp 0.2.1–0.3.0 logs "Using default: 1.0" but the
 source applies `50.0`. Set it explicitly when it matters.
 
 ```python

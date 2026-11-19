@@ -57,7 +57,7 @@ planner.make_planner(["panda"], {"planner_id": "wAstar", "heuristic": "bfs",
   world frame, `pose.q` as `[w, x, y, z]`. The search planners reach it by snapping to IK
   solutions near the goal.
 - `GoalType` also lists `POSITION`, `MULTI_GOAL_JOINTS`, `MULTI_GOAL_POSE` and
-  `MULTI_GOAL_POSITION`, but in srmp 0.2.1–0.2.2 `plan()` raises "Goal type not supported at the
+  `MULTI_GOAL_POSITION`, but in srmp 0.2.1–0.3.0 `plan()` raises "Goal type not supported at the
   moment" for them, and the list constructor accepts exactly one goal. Use `JOINTS` or `POSE`
   with a one-element list. For alternatives, plan to each candidate and keep the best.
 

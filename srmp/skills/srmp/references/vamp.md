@@ -34,6 +34,15 @@ print(planner.get_active_validity_backend())        # the backend actually in us
 - `planner.is_vamp_state_valid(name, q)` (VAMP): **True means collision-free**. Opposite
   polarity. Only for robots where `is_robot_vamp_supported(name)` is True.
 
+## A base resting on a table
+
+With the base flush on a table, every state collides, under both backends.
+`planner.set_base_contact_allowed(name, True)` stops checking the robot's fixed links
+(`get_fixed_link_names`) against static objects, but only under coal: VAMP's base checks are
+compiled in. With the switch on and a base sphere overlapping an object, `"auto"` falls back
+to coal and `"vamp"` raises, naming the object. Lowering or cutting out the table under the
+base keeps VAMP.
+
 ## The VAMP-only planner
 
 `vamp_rrtc` is VAMP's RRT-Connect. It needs the VAMP backend (`"validity_backend": "vamp"`

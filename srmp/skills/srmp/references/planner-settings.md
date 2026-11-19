@@ -12,7 +12,7 @@ planner.make_planner(articulation_names: list[str], planner_context: dict[str, s
 - Call `make_planner` again whenever you change robots, planners or settings. Planning many
   queries with the same planner is cheap: built state is reused while the scene, goal and
   settings stay the same.
-- Defaults below are what srmp 0.2.1–0.2.2 apply when a key is omitted (from the source; the
+- Defaults below are what srmp 0.2.1–0.3.0 apply when a key is omitted (from the source; the
   logged ones were checked against the build). Planners log many of the defaults they fill
   in, for example `No weight specified. Using default: 50`.
 
@@ -121,7 +121,7 @@ Check with `planner.get_available_validity_backends()` (backends in this build),
 | `high_level_focal_suboptimality` | `"1.3"` | Suboptimality bound of the conflict tree search. |
 | `low_level_focal_suboptimality` | `"1.3"` | Suboptimality bound of the per-robot searches. |
 
-Note on `weight_low_level_heuristic`: when it is omitted, srmp 0.2.1–0.2.2 logs "Using default:
+Note on `weight_low_level_heuristic`: when it is omitted, srmp 0.2.1–0.3.0 logs "Using default:
 1.0" but the source applies `50.0`. Set it explicitly (for example `"1.0"` or `"50"`) when the
 value matters. See [multi-robot.md](multi-robot.md).
 

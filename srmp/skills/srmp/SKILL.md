@@ -12,7 +12,7 @@ description: >-
   Also use when the code imports srmp or mentions PlannerInterface, GoalConstraint, Pose or
   Trajectory from srmp.
 metadata:
-  srmp_version: "0.2.2"
+  srmp_version: "0.3.0"
 ---
 
 # SRMP motion planning
@@ -83,7 +83,7 @@ print(len(traj.positions), "waypoints; last:", np.round(traj.positions[-1], 3))
 More facts that trip people up:
 
 - Plan to `GoalType.JOINTS` or `GoalType.POSE` with exactly one goal in the list. The other
-  `GoalType` members (`POSITION`, `MULTI_GOAL_*`) raise in srmp 0.2.1–0.2.2.
+  `GoalType` members (`POSITION`, `MULTI_GOAL_*`) raise in srmp 0.2.1–0.3.0.
 - The one exception to "values are strings": `inadmissible_heuristics` (MHAstar) also takes
   a list of strings. A float or int value makes `make_planner` raise `TypeError`.
 - `collision_aware_ik(name, pose, q_seed)` returns `(q, status)` with status `"found"`,
